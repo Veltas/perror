@@ -1,3 +1,6 @@
+// Copyright (C) 2015  Christopher Leonard
+// See README first for copyright terms, full terms in COPYING
+
 #include <errno.h>
 #include <getopt.h>
 #include <string.h>
@@ -13,7 +16,7 @@ int main(int argc, char *argv[])
 {
   struct option lopts[] = {{.name = "help", .val = 'h'}, {0}};
   
-  /* Process any options given */
+  // Process any options given
   int opt;
   while (
     (opt = getopt_long(argc, argv, "h", lopts, NULL)) != -1
@@ -29,7 +32,7 @@ int main(int argc, char *argv[])
     }
   }
   
-  /* Otherwise we expect just the one argument: the error number */
+  // Otherwise we expect just the one argument: the error number
   if (argc != 2)
   {
     fputs("Expected just one argument, see -h / --help\n", stderr);
@@ -43,7 +46,7 @@ int main(int argc, char *argv[])
     return EINVAL;
   }
   
-  /* And the whole point was this line */
+  // The result of our efforts
   puts(strerror(input_number));
   
   return 0;

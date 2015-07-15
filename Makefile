@@ -1,3 +1,6 @@
+# Copyright (C) 2015  Christopher Leonard
+# See README first for copyright terms, full terms in COPYING
+
 .PHONY: all clean install uninstall
 
 CC = gcc
