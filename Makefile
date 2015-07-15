@@ -1,7 +1,7 @@
 .PHONY: all clean install uninstall
 
 CC = gcc
-CFLAGS = -std=c99 -pedantic -Wall
+CFLAGS = -O2 -std=c99 -pedantic -Wall
 prefix = /usr/local
 
 all: bin/perror
